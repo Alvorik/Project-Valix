@@ -25,7 +25,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "ValixKey",
        SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "iseehacks"
+       Key = "ValixIsHere"
     }
 })
 
@@ -137,7 +137,7 @@ local JoinDisco = Info:CreateButton({
 })
 
 -- Shindo Life
-if game.PlaceId == 4616652839 then
+if game.PlaceId == 662417684 then
     loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
 elseif game.PlaceId == 5664805984 then
     loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
