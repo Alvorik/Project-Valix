@@ -1,9 +1,12 @@
+
+-- This script was created by ALVORIKK. and by the development team.
+
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
     Name = "Project Valix",
-    LoadingTitle = "Project Valix ",
-    LoadingSubtitle = "Welcome to Project Valix",
+    LoadingTitle = "Project Valix | V2.3",
+    LoadingSubtitle = "by Admins, HeadAdmin in the discord server",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -16,7 +19,7 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Project Valix",
+       Title = "Project Valix | V2.3",
        Subtitle = "Key System",
        Note = "Join (discord.gg/t7sXgFNmgq) for the key.",
        FileName = "ProjectKey",
@@ -26,106 +29,171 @@ local Window = Rayfield:CreateWindow({
     }
 })
 
-local Home = Window:CreateTab("Home", 4483362458) -- Title, Image
-local MainSection = Home:CreateSection("Home")
+local Menu = Window:CreateTab("Home") -- Title, Image
+local MenuSection = Menu:CreateSection("Main Stuff")
 
-local INFYIELD = Home:CreateButton({
-    Name = "FE Infinite Yield",
-    Callback = function()
+
+getgenv().SelectedOption = nil
+
+--Functions
+function selectad()
+    if getgenv().SelectedOption == "Admin Dropdown" then
+        print("Please Select An FE Admin to Execute :)")
+    elseif getgenv().SelectedOption == "Inf Yield FE" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end,
-})
+    elseif getgenv().SelectedOption == "Home-Brew" then
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Syntaxx64/HomebrewAdmin/master/Main"))()
+    elseif getgenv().SelectedOption == "Fate's Admin" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+    end
+end
 
-local speedslider = Home:CreateSlider({
-    Name = "Walk Speed",
-    Range = {16, 600},
-    Increment = 10,
-    Suffix = "WalkSpeed",
-    CurrentValue = 16,
-    Flag = "speedboa", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(s)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end,
-})
 
-local JoinDisco = Home:CreateButton({
-    Name = "Copy Project X Discord Server",
+-- Menu shit
+
+local Label = Menu:CreateLabel("Welcome to Project Valix 2.3")
+
+local JoinDisco = Menu:CreateButton({
+    Name = "Join The Discord. ",
     Callback = function()
         setclipboard("https://discord.gg/t7sXgFNmgq")
     end,
 })
 
-local jumphack = Home:CreateSlider({
-    Name = "Jump Power",
-    Range = {50, 600},
-    Increment = 10,
-    Suffix = "Jump Power",
-    CurrentValue = 50,
-    Flag = "JumpPower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(s)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+local MLabel = Menu:CreateLabel("Other Stuff")
+
+local Dropdown1 = Menu:CreateDropdown({
+    Name = "Admin Select",
+    Options = {"Admin Dropdown","Inf Yield FE","Home-Brew","Fate's Admin"},
+    CurrentOption = "Admin Dropdown",
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+        getgenv().SelectedOption = Option
+        selectad()
     end,
 })
 
-local ScriptSpy = Home:CreateButton({
-    Name = "ScriptSpy, Make Scripts",
+
+local RTX = Menu:CreateButton({
+    Name = "RTX",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/iLBHxzrP'),true))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()
     end,
 })
 
-local DDex = Home:CreateButton({
-    Name = "Dark Dex, Basicly A Explorer",
+local SimpleSpy = Menu:CreateButton({
+    Name = "Simple Spy",
+    Callback = function()
+        loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+    end,
+})
+
+local ScriptMaker = Menu:CreateButton({
+    Name = "Hydrogren Spy",
+    Callback = function()
+        local owner = "Upbolt"
+        local branch = "revision"
+        
+        local function webImport(file)
+            return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+        end
+        
+        webImport("init")
+        webImport("ui/main")
+
+
+    end,
+})
+
+local DDex = Menu:CreateButton({
+    Name = "Dark Dex",
     Callback = function()
         loadstring(game:HttpGet("https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4"))()
     end,
 })
 
+local RShitLabel = Menu:CreateLabel("Sliders")
 
--- Shindo Life
-local Shindo = Window:CreateTab("Shindo Life")
-local ShindoSection = Shindo:CreateSection("Shindo Life Section")
-
-
-
-local SpinError = Shindo:CreateButton({
-    Name = "Spin Error, Click Before you start to spin.",
-    
-	Callback = function()
-		local args={
-			[1]= "band"
-			[2]= "\128"
-		}
-
-		game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
-	
-	end,
+local speedslider = Menu:CreateSlider({
+    Name = "Speed",
+    Range = {16, 600},
+    Increment = 10,
+    Suffix = "Speed Power",
+    CurrentValue = 16,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end,
 })
 
-local SpinSave = Shindo:CreateButton({
-    Name = "Spin Save",
-    Callback = function()
-    	local args={
-			[1]= "band",
-			[2]= "Eye"
-		}
 
-		game.GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
-	
-	end,
+local jumphack = Menu:CreateSlider({
+    Name = "Jump Power",
+    Range = {50, 600},
+    Increment = 10,
+    Suffix = "Jump Power",
+    CurrentValue = 50,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end,
+})
+
+local DestroyUI = Menu:CreateButton({
+    Name = "Destroy Project X",
+    Callback = function()
+        Rayfield:Destroy()    
+    end,
+})
+
+-- Shindo Shit
+local Shindo = Window:CreateTab("Shindo Life")
+local ShindoSection = Shindo:CreateSection("Shindo Life Stuff")
+
+local ShindoLabel = Shindo:CreateLabel("Menu Stuff, Our Inf Spin not working rn use don insted")
+
+local ErrorShindo = Shindo:CreateButton({
+    Name = "Spin Error, Click before spinning.",
+    Callback = function()
+
+        local args = {
+            [1] = "band",
+            [2] = "\128"
+        }
+
+        game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+    end,
+})
+
+local ShindoErrorSave = Shindo:CreateButton({
+    Name = "Spin Save ",
+    Callback = function()
+    -- The function that takes place when the button is pressed
+    end,
+})
+
+local DonShindo = Shindo:CreateButton({
+    Name = "Don Hub",
+    Callback = function()
+        repeat pcall(function() source = game:HttpGet('https://gist.github.com/AzureArts/99f5b5cfd49def461216e4d4689757ce/raw',true) end) if source == nil then wait(0.5) warn('HTTP Error, retrying') end until source ~= nil loadstring(source)()
+    end,
+})
+
+local ShindoG = Shindo:CreateLabel("In-Game Stuff")
+
+
+local VgHubShind = Shindo:CreateButton({
+    Name = "Vg Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end,
 })
 
 local NightSide = Shindo:CreateButton({
     Name = "NightSide Script",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/TrustsenseDev/Utilities/main/Premier.lua', true))()
-    end,
-})
-
-local VgHubShind = Shindo:CreateButton({
-    Name = "Vg Hub",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end,
 })
 
@@ -136,6 +204,14 @@ local CatalystShindo = Shindo:CreateButton({
     end,
 })
 
+local Premier = Shindo:CreateButton({
+    Name = "Premier V3",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TrustsenseDev/Utilities/main/Premier.lua', true))()
+    end,
+})
+
+
 local NukeShind = Shindo:CreateButton({
     Name = "Nuke Hub",
     Callback = function()
@@ -144,7 +220,7 @@ local NukeShind = Shindo:CreateButton({
 })
 
 
--- Blox Fruits Third Sea
+    -- Blox Fruits Third Sea
 if game.PlaceId == 7449423635 then
     local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
     local BloxFSection = BloxF:CreateSection("BloxFruits Section")
@@ -195,7 +271,7 @@ if game.PlaceId == 7449423635 then
 
     --BloxFruits Second Sea
 elseif game.PlaceId == 4442272183 then
-    local BloxF = Window:CreateTab("Blox Fruits") -- Title, Image
+    local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
     local BloxFSection = BloxF:CreateSection("BloxFruits Section")
 
     local Ripper = BloxF:CreateButton({
@@ -243,7 +319,7 @@ elseif game.PlaceId == 4442272183 then
 
     --Blox Fruits First Sea
 elseif game.PlaceId == 2753915549 then
-    local BloxF = Window:CreateTab("Blox Fruits") -- Title, Image
+    local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
     local BloxFSection = BloxF:CreateSection("BloxFruits Section")
 
     local Ripper = BloxF:CreateButton({
@@ -289,6 +365,7 @@ elseif game.PlaceId == 2753915549 then
         end,
     })
 
+
     --Build A Boat for Treasure
 elseif game.PlaceId == 537413528 then
     local Build = Window:CreateTab("Build A Boat") -- Title, Image
@@ -327,33 +404,97 @@ elseif game.PlaceId == 537413528 then
 elseif game.PlaceId == 3956818381 then
     local Ninja = Window:CreateTab("Ninja Legends") -- Title, Image
     local NinjaSection = Ninja:CreateSection("Ninja Legends Section")
+    --Values
+    _G.AutoClick = true
+    _G.AutoBuySword = true
+    _G.AutobuyBelts = true
+    _G.AutoHoop = true
 
-    
-    local ASwing = Ninja:CreateToggle({
-        Name = "Auto-Swing",
-        CurrentValue = false,
-        Flag = "Auto-Swing", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-        Callback = function(Value)
-            while wait() do 
-            local args = {
-            [1] = "swingKatana"
-            }
-    
-            game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
-            end
-            
+    -- Functions
+    function autotap()
+        while _G.AutoClick == true do
+            local ohString1 = "swingKatana"
+
+            game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1)
+            wait(.3)
         
-        end,
-    })
-    
+        end
+    end
 
-    
-    local AutoChi = Ninja:CreateButton({
-        Name = "Auto-Chi",
-        Callback = function()
-        -- The function that takes place when the button is pressed
+    function autohoops()
+        while _G.AutoHoop == true do
+            local ohString1 = "useHoop"
+            local ohInstance2 = workspace.Hoops.Hoop
+
+            game:GetService("ReplicatedStorage").rEvents.hoopEvent:FireServer(ohString1, ohInstance2)
+            wait(.6)
+        end
+    end
+
+    function autobuybelts()
+        while _G.AutobuyBelts == true do
+            local ohString1 = "buyAllBelts"
+            local ohString2 = "Blazing Vortex Island"
+
+            game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1, ohString2)
+            wait(2)
+        end
+    end
+
+    function autobuyswords()
+        while G.AutoBuySwords == true do
+            local ohString1 = "buyAllSwords"
+            local ohString2 = "Blazing Vortex Island"
+
+            game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1, ohString2)
+            wait(1)
+        end
+    end    
+
+    -- Toggles + Buttons
+        local AutoClickToggle = Ninja:CreateToggle({
+        Name = "Auto-Click",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoClick = Value
+            autotap()
         end,
     })
+
+    local AutoBuySword = Ninja:CreateToggle({
+        Name = "Auto-Buy Sword",
+        CurrentValue = false,
+        Flag = "EquiptBestSword", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoBuySword = Value
+            autobuyswords()
+        end,
+    })
+
+    local Belts = Ninja:CreateToggle({
+        Name = "Auto-Buy Belts",
+        CurrentValue = false,
+        Flag = "AutoBuyBestBelt", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutobuyBelts = Value
+            autobuybelts()
+        end,
+    })
+
+    local AutoHoopss = Ninja:CreateToggle({
+        Name = "Auto-Hoop",
+        CurrentValue = false,
+        Flag = "autohoops", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoHoop = Value
+            autohoops()
+        end,
+    })
+
+    -- Buttons
+
+    local BLabel = Ninja:CreateLabel("Buttons")
     
     local Proxamia = Ninja:CreateButton({
         Name = "Proxamia",
@@ -686,7 +827,7 @@ elseif game.PlaceId == 2248408710 then
     --Mega Noob Simulator
 elseif game.PlaceId == 4543144283 then
     local MNoob = Window:CreateTab("Mega Noob") -- Title, Image
-    local MNoobSection = MNoob:CreateSection("Mega Noob Simulator")
+    local MNoobSection = MNoob:CreateSection("Mega Noob Sim Stuff")
 
     local AutoNoobs = MNoob:CreateButton({
         Name = "Auto-Kill Noobs LVL 1",
@@ -818,7 +959,97 @@ elseif game.PlaceId == 4543144283 then
 elseif game.PlaceId == 662417684 then
     local LBlocks = Window:CreateTab("Lucky Blocks") -- Title, Image
     local LBlocksSection = LBlocks:CreateSection("Lucky Blocks BattleGround")
+    
+    --Values
+    _G.GRainbowBlocks = true
+    _G.GGalaxyBlocks = true
+    _G.GDiamondBlocks = true
+    _G.GSuperBlocks = true
+    _G.GNormieBlocks = true
+    -- Functions
+    function rainbowblocks()
+        while _G.GRainbowBlocks == true do
+            game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+            wait(.1)
+        end
+    end
 
+    function galaxyblock()
+        while _G.GGalaxyBlocks == true do
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+            wait(.1)
+        end
+    end
+
+    function diamondblocks()
+        while _G.GDiamondBlocks == true do
+            game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+            wait(.001)
+        end
+    end
+
+    function superblocks()
+        while _G.GSuperBlocks == true do
+            game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+            wait(.001)
+        end
+    end
+
+    function normieblocks()
+        while _G.GNormieBlocks == true do
+            game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+            wait(.001)
+        end
+    end
+
+
+    -- Toggles + Buttons + Labels
+
+    local LuckyBLabel = LBlocks:CreateLabel("Toggles, Turn them off once you've gotten the items.")
+
+    local GivLeRainbowBlocks = LBlocks:CreateToggle({
+        Name = "Give Rainbow Items",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.GRainbowBlocks = Value
+            rainbowblocks()
+        end,
+    })
+
+    local GivGalaxyBlocks = LBlocks:CreateToggle({
+        Name = "Give Galaxy Items",
+        CurrentValue = false,
+        Flag = "EquiptBest", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.GGalaxyBlocks = Value
+            galaxyblock()
+        end,
+    })
+
+    local GivSuperBlocks = LBlocks:CreateToggle({
+        Name = "Give Super Items",
+        CurrentValue = false,
+        Flag = "EquiptBest", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.GSuperBlocks = Value
+            superblocks()
+        end,
+    })
+
+    local AutoEquip = LBlocks:CreateToggle({
+        Name = "Give Lucky Items",
+        CurrentValue = false,
+        Flag = "EquiptBest", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.GNormieBlocks = Value
+            normieblocks()
+        end,
+    })
+    
+    local LuckyBLabel = LBlocks:CreateLabel("Buttons")
+
+    --Buttons
     local RainbowBlocks = LBlocks:CreateButton({
         Name = "Spawn Rainbow Block Items",
         Callback = function()
@@ -927,7 +1158,7 @@ elseif game.PlaceId == 4620170611 then
 
 
     local Plankton = BreakeIn:CreateButton({
-        Name = "Give Plank, dont run script if your not in the repairing part",
+        Name = "Give Plank",
         Callback = function()
             local args = {
                 [1] = "Plank"
@@ -936,7 +1167,11 @@ elseif game.PlaceId == 4620170611 then
             game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
          end,
     })
+
 elseif game.PlaceId == 3851622790 then
+    local BreakeIn = Window:CreateTab("Break In") -- Title, Image
+    local BreakInSection = BreakeIn:CreateSection("Break In Section")
+
     local Apple = BreakeIn:CreateButton({
         Name = "Give Apple",
         Callback = function()
@@ -983,8 +1218,8 @@ elseif game.PlaceId == 3851622790 then
     })
 
 
-    local Plankton = BreakeIn:CreateButton({
-        Name = "Give Plank, dont run script if your not in the repairing part",
+   local Plankton = BreakeIn:CreateButton({
+        Name = "Give Plank",
         Callback = function()
             local args = {
                 [1] = "Plank"
@@ -992,9 +1227,370 @@ elseif game.PlaceId == 3851622790 then
             
             game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
          end,
+    }) 
+
+    -- Sword Fighter Simulator
+elseif game.PlaceId == 11040063484 then
+    local SwordFighter = Window:CreateTab("Sword Fighter") -- Title, Image
+    local SwordFighterSection = SwordFighter:CreateSection("Sword Fighter Section")
+
+    --Values
+    _G.AutoClick = true
+    _G.AutoEquiptItem = true
+    _G.AutoEquiptPet = true
+
+    -- Functions
+    function autotap()
+        while _G.AutoClick == true do
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+            wait(.4)
+        end
+    end
+
+    function autoequip()
+        while _G.AutoEquipt == true do
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.WeaponInvService.RF.EquipBest:InvokeServer()
+            wait(1)
+        end
+    end
+
+    function autoequiptpet()
+        while _G.AutoEquiptPet == true do
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.PetInvService.RF.EquipBest:InvokeServer()
+            wait(2)
+        end
+    end
+
+    -- Toggles + Buttons
+        local AutoClickToggle = SwordFighter:CreateToggle({
+        Name = "Auto-Click",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoClick = Value
+            autotap()
+        end,
     })
 
+    local AutoEquip = SwordFighter:CreateToggle({
+        Name = "Auto-Equipt Best Item",
+        CurrentValue = false,
+        Flag = "EquiptBest", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoEquipt = Value
+            autoequip()
+        end,
+    })
     
+    local AutoEquipPet = SwordFighter:CreateToggle({
+        Name = "Auto-Equipt Best Pet",
+        CurrentValue = false,
+        Flag = "AutoEquiptBPet", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoEquipPet = Value
+            autoequiptpet()
+        end,
+    })
+
+    -- Tapping Legends X
+elseif game.PlaceId == 8750997647 then
+    local TapLegends = Window:CreateTab("Tapping Legends") -- Title, Image
+    local TapLegendsSection = TapLegends:CreateSection("Tapping Legends X Stuff")
+
+    -- Values
+    _G.AutoTap = true
+    _G.AutoRebirth = true
+    _G.AutoEquiptPet = true
+
+    -- Functions
+    function autotap()
+        while _G.AutoTap == true do
+            game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
+            wait(.4)
+        end
+    end
+
+    function autorebirth()
+        while _G.AutoRebirth == true do
+            local args = {
+                [1] = 1
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+            wait(.4)
+        end
+    end
+
+    function AutoPet()
+        while _G.AutoEquiptPet == true do
+            game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+            wait (9)
+        end
+    end
+
+    -- Toggles + Buttons
+    local AutoTapToggle = TapLegends:CreateToggle({
+        Name = "Auto-Tap",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoTap = Value
+            autotap()
+        end,
+    })
+
+    local AutoRebirthToggle = TapLegends:CreateToggle({
+        Name = "Auto-Rebirth",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoRebirth = Value
+            autorebirth()
+        end,
+    })
+
+    local AutoBestPetToggle = TapLegends:CreateToggle({
+        Name = "Auto-Equipt Best Pet",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoEquiptPet = Value
+            AutoPet()
+        end,
+    })
+
+    local TapLegendsButtons = TapLegends:CreateLabel("Open Eggs")
+
+    local BasicEgg = TapLegends:CreateButton({
+        Name = "Buy Basic Egg",
+        Callback = function()
+            local args = {
+                [1] = "Basic Egg",
+                [2] = 1
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(unpack(args))
+        end,
+    })
+
+    local RareEgg = TapLegends:CreateButton({
+        Name = "Buy Rare Egg",
+        Callback = function()
+            local args = {
+                [1] = "Rare Egg",
+                [2] = 3
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(unpack(args))
+            
+        end,
+    })
+
+    -- Muscle Legends
+elseif game.PlaceId == 3623096087 then
+    local MLegends = Window:CreateTab("Muscle Legends") -- Title, Image
+    local MLegendsSection = MLegends:CreateSection("Muscle Legends Stuff")
+
+    -- Values
+    _G.AutoPunch = true
+    _G.AutoLiftD = true
+
+    -- Functions
+    function autopunch()
+        while _G.AutoPunch == true do
+            game:GetService("Players").LocalPlayer.muscleEvent:FireServer("punch", "leftHand")
+            wait(.5)
+        end
+    end
+
+    function autolift()
+        while _G.AutoLiftD == true do            
+            game:GetService("Players").LocalPlayer.muscleEvent:FireServer("rep")
+            wait(.4)
+        end
+    end
+
+    -- Toggles + Buttons
+    local AutoPunch = MLegends:CreateToggle({
+        Name = "Auto-Punch",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoPunch = Value
+            autopunch()
+        end,
+    })
+
+    local AutoLiftDumb = MLegends:CreateToggle({
+        Name = "Auto-Lift",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoLiftD = Value
+            autolift()
+        end,
+    })
+
+elseif game.PlaceId == 4225025295 then
+    local NinSim = Window:CreateTab("Ninja Simulator") -- Title, Image
+    local NinSimSection = NinSim:CreateSection("Ninja Simulator Stuff")
+
+    -- Values
+    _G.AutoBuySword = true
+
+    -- Functions
+    
+    function ASword()
+        while _G.AutoBuySword == true do
+            local args = {
+                [1] = {
+                    [1] = game.ClientStorage.Client.Services.PersonalRemoteService,
+                    [2] = "48f274bb-289e-41fc-bee4-5331eb5f6b52",
+                    [3] = "0.5457940919443799",
+                    [4] = "c71645da-3abd-46ef-9404-d0a5d095c41b"
+                }
+            }
+
+            game:GetService("AnalyticsService"):FindFirstChild("210d1b0d-b5c2-47f2-b80c-3dcf3c8e2943"):InvokeServer(unpack(args))
+            wait(.1)
+        end
+    end
+
+    -- Toggles + Buttons + Labels
+    local BuyASwordT = NinSim:CreateToggle({
+        Name = "Auto-Buy New Swords",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoBuySword = Value
+            ASword()
+        end,
+    })
+
+elseif game.PlaceId == 10824616460 then 
+    local SwordSlasher = Window:CreateTab("Sword Slasher") -- Title, Image
+    local SSlasherSection = SwordSlasher:CreateSection("Sword Slasher Stuff")
+
+    -- Values
+    _G.AutoAtack1 = true
+    _G.AutoDefense = true
+    _G.AutoDamage = true
+    _G.AutoRegen = true
+    _G.AutoLuck = true
+
+
+    -- Slider Shits
+    
+    -- Functions
+
+    function Aluck()
+        while _G.AutoLuck == true do
+            game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Luck")
+            wait(.4)
+        end
+    end
+
+
+    function autoreg()
+        while _G.AutoRegen == true do
+            local args = {
+                [1] = "Regen",
+                [2] = ""
+            }
+
+            game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer(unpack(args))
+            wait(.4)
+        end
+    end
+
+
+    function autodef()
+        while _G.AutoDefense == true do
+            local args = {
+                [1] = "Defence",
+                [2] = ""
+            }
+
+            game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer(unpack(args))
+            wait(.4)
+        end
+    end
+
+    function autodmg()
+        while _G.AutoDamage == true do
+            local args = {
+                [1] = "Strength",
+                [2] = ""
+            }
+
+            game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer(unpack(args))
+            wait(.4)
+        end
+    end
+
+    function swordslash()
+        while _G.AutoAtack1 == true do
+            game:GetService("ReplicatedStorage").EventStorage.Attack:InvokeServer()
+            wait(.01)
+        end
+    end
+
+    -- Toggles + Buttons
+
+    local AAtackingToggle = SwordSlasher:CreateToggle({
+        Name = "Auto-Swing",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoAtack1 = Value
+            swordslash()
+        end,
+    })
+
+    local Label = SwordSlasher:CreateLabel("TURN ON AFK MODE WHILE YOU HAVE THESE ON")
+    local Label = SwordSlasher:CreateLabel("Auto Stuff")
+
+    local DefenseToggle = SwordSlasher:CreateToggle({
+        Name = "Auto-Upgrade Defense",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoDefense = Value
+            autodef()
+        end,
+    })
+
+    local DMGToggle = SwordSlasher:CreateToggle({
+        Name = "Auto-Upgrade DMG",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoDamage = Value
+            autodmg()
+        end,
+    })
+
+    local AAtackingToggle = SwordSlasher:CreateToggle({
+        Name = "Auto-Upgrade Regen",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoRegen = Value
+            autoreg()
+        end,
+    })
+
+    local ALuckyToggle = SwordSlasher:CreateToggle({
+        Name = "Auto-Upgrade Luck",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoLuck = Value
+            Aluck()
+        end,
+    })
+
+
 
 end
 
