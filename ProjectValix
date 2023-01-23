@@ -22,10 +22,10 @@ local Window = Rayfield:CreateWindow({
        Title = "Project Valix",
        Subtitle = "Key System",
        Note = "Join the discord (discord.gg/t7sXgFNmgq)",
-       FileName = "ValixKey",
+       FileName = "ValixKey",w
        SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "ValixIsHere"
+       Key = "iseehacks"
     }
 })
 
@@ -136,82 +136,8 @@ local JoinDisco = Info:CreateButton({
     end,
 })
 
--- Shindo Life
-if game.PlaceId == 662417684 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5664805984 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5664803952 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5743370338 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6984568732 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 7214033433 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 8472733618 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 9310522814 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 7534339269 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5451410109 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 7524809704 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 7524811367 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6505734854 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 8184506020 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6341670805 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6602058266 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5431069982 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5447073001 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5451398863 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5255237254 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5824792748 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6602103757 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5451401540 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5431071837 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6986372023 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 4601350394 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 4601350214 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 4601350760 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 7923764447 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 4601350656 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 4601350809 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6901575446 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5451405681 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6593188260 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 6593187011 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-elseif game.PlaceId == 5307141034 then
-    loadstring(game:HttpGet(('https://pastebin.com/raw/k5haGGQ0'),true))()
-
     -- Lucky Blocks
-elseif game.PlaceId == 662417684 then
+if game.PlaceId == 662417684 then
     local LBlocks = Window:CreateTab("Lucky Blocks") -- Title, Image
     local LBlocksSection = LBlocks:CreateSection("Lucky Blocks Stuff")
 
