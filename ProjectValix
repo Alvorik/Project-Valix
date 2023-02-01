@@ -129,6 +129,9 @@ local InfoSection = Info:CreateSection("Information Stuff")
 
 local InfoLabel = Info:CreateLabel("Welcome to Project Valix, Project Valix is an Upcoming Script Hub")
 local InfoLabel = Info:CreateLabel("Project Valix Was Originaly Created by Alvorikk, and Is now Being Developed by 3 People")
+local InfoLabel = Info:CreateLabel("Project Valix 1.3")
+
+local sInfoSection = Info:CreateSection("Join Our Discord")
 
 local JoinDisco = Info:CreateButton({
     Name = "Copy The Discord Community's Discord. ",
@@ -136,6 +139,130 @@ local JoinDisco = Info:CreateButton({
         setclipboard("https://discord.gg/t7sXgFNmgq")
     end,
 })
+
+
+local InfoSection = Info:CreateSection("Manual Load")
+
+
+local JoinDisco = Info:CreateButton({
+    Name = "Load Shindo Life Stuff",
+    Callback = function()
+        
+        -- Shindo Life Loading Notif
+        Rayfield:Notify({
+            Title = "Project Valix",
+            Content = "Succesfully Loaded Shindo Life Tab",
+            Duration = 6.5,
+            Image = 0,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+        })
+
+        wait(1)
+
+
+        -- Shindo Shit
+
+        local Shindo = Window:CreateTab("Shindo Life") -- Title, Image
+        local ShindoSection = Shindo:CreateSection("Shindo Life Menu Stuff")
+
+        local DonHubs = Shindo:CreateButton({
+            Name = "Don Hub",
+            Callback = function()
+               
+                Rayfield:Notify({
+                    Title = "Project Valix",
+                    Content = "Succesfully Started Loading, Don Hub",
+                    Duration = 6.5,
+                    Image = 0,
+                    Actions = { -- Notification Buttons
+                    Ignore = {
+                        Name = "Okay!",
+                        Callback = function()
+                        print("Loaded")
+                    end
+                    },
+                },
+                })
+
+                wait(1)
+
+                repeat pcall(function() source = game:HttpGet('https://gist.github.com/AzureArts/99f5b5cfd49def461216e4d4689757ce/raw',true) end) if source == nil then wait(0.5) warn('HTTP Error, retrying') end until source ~= nil loadstring(source)()
+
+            end,
+        })
+
+        local ShindoSection = Shindo:CreateSection("Shindo Life Stuff")
+
+
+        local AScriptoriknow = Shindo:CreateButton({
+            Name = "Night-Side",
+            Callback = function()
+                
+                Rayfield:Notify({
+                    Title = "Project Valix",
+                    Content = "Succesfully Started Loading, Night Side",
+                    Duration = 6.5,
+                    Image = 0,
+                    Actions = { -- Notification Buttons
+                    Ignore = {
+                        Name = "Okay!",
+                        Callback = function()
+                        print("Loaded")
+                    end
+                    },
+                },
+                })
+                
+                wait (1)
+                
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TrustsenseDev/Utilities/main/Premier.lua", true))()
+
+            end,
+        })
+
+        local Stuff1 = Shindo:CreateButton({
+            Name = "Nuke Hub",
+            Callback = function()
+                Rayfield:Notify({
+                    Title = "Project Valix",
+                    Content = "Succesfully Started Loading, Nuke Hub",
+                    Duration = 6.5,
+                    Image = 0,
+                    Actions = { -- Notification Buttons
+                    Ignore = {
+                        Name = "Okay!",
+                        Callback = function()
+                        print("Loaded")
+                    end
+                    },
+                },
+                })
+                
+                wait (1)
+
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+
+
+            end,
+        })
+
+
+
+    end,
+
+
+})
+
+
+
+
 
 -- Note To Alvorikk Fix Shindo Life
 
@@ -1985,6 +2112,96 @@ elseif game.PlaceId == 10824616460 then
     })
 
 
+elseif game.PlaceId == 9647915471 then
+    local CLEGENDSX = Window:CreateTab("Clicker Legends") -- Title, Image
+    local CLEGENDSXSection = CLEGENDSX:CreateSection("Clicker Legends X Stuff")
+
+    -- Values
+    _G.AutoClick = true
+
+    getgenv().SelectedRebirthOp = nil
+
+    -- Functions
+    function autontap()
+        while _G.AutoClick == true do
+            game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.Click:FireServer("Normal")
+            wait(.001)
+        end
+    end
+
+    function selectR()
+        if getgenv().SelectedRebirthOp == "Rebirth 1" then
+            local args = {
+                [1] = "List",
+                [2] = "Rb1"
+            }
+
+            game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.Rebirth:InvokeServer(unpack(args))
+        elseif getgenv().SelectedRebirthOp == "Rebirth 5" then
+            local args = {
+                [1] = "List",
+                [2] = "Rb2"
+            }
+
+            game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.Rebirth:InvokeServer(unpack(args))
+        end
+    end
+
+    -- Toggles + Buttons
+    
+
+    local Dropdown = CLEGENDSX:CreateDropdown({
+        Name = "Auto-Rebirth Selection",
+        Options = {"Rebirth 1","Rebirth 5"},
+        CurrentOption = "Option 1",
+        Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Option)
+            getgenv.SelectedRebirthOp = Option
+            selectR()
+        end,
+    })
+
+
+    local Toggle = CLEGENDSX:CreateToggle({
+        Name = "Auto-Tap",
+        CurrentValue = false,
+        Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(Value)
+            _G.AutoClick = Value
+            autontap()
+        end,
+    })
+
+elseif game.PlaceId == 606849621 then
+    local JailBreak = Window:CreateTab("JailBreak") -- Title, Image
+    local JailBreakSection = JailBreak:CreateSection("JailBreak Stuff")
+
+    local DonHubs = JailBreak:CreateButton({
+        Name = "Auto-Rob",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loading, Auto-Rob",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet('https://scripts.luawl.com/14245/JailbreakerFree.lua'))()
+
+
+        end,
+    })
 
 
 
