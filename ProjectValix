@@ -22,8 +22,8 @@ local Window = Rayfield:CreateWindow({
        Title = "Project Valix",
        Subtitle = "Key System",
        Note = "Join the discord (discord.gg/t7sXgFNmgq)",
-       FileName = "SiriusKey",
-       SaveKey = true,
+       FileName = "ValixSKey",
+       SaveKey = false,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
        Key = "ValixIsHere"
     }
@@ -874,11 +874,57 @@ elseif game.PlaceId == 10824616460 then
         -- Blox Fruits Third Sea
 elseif game.PlaceId == 7449423635 then
     local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
-    local BloxFSection = BloxF:CreateSection("BloxFruits Section")
+    local BloxFSection = BloxF:CreateSection("BloxFruits #1 Stuff")
 
+    local Mukuro = BloxF:CreateButton({
+        Name = "Mukuro",
+        Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mukuro",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+        end,
+    })
+    
+    
     local Ripper = BloxF:CreateButton({
         Name = "Ripper Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Ripper",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
         end,
     })
@@ -886,27 +932,81 @@ elseif game.PlaceId == 7449423635 then
     local HohoHub = BloxF:CreateButton({
         Name = "HoHo Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Hoho Hub",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
         end,
     })
 
+    local BloxFSection = BloxF:CreateSection("BloxFruits #2 Stuff")
+
+
     local UltraStuff = BloxF:CreateButton({
-        Name = "Blox Fruits Hub2",
+        Name = "Furk BloxFruits",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Furk Bloxfruits",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
         end,
     })
     
-    local Mukuro = BloxF:CreateButton({
-        Name = "Mukuro",
-        Callback = function()
-            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-        end,
-    })
 
     local Mango = BloxF:CreateButton({
         Name = "Mango",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mango",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             getgenv().WaterMark = true
             loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
         end,
@@ -915,6 +1015,26 @@ elseif game.PlaceId == 7449423635 then
     local Vellerius = BloxF:CreateButton({
         Name = "Vellerius",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Vellerius",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
         end,
     })
@@ -923,11 +1043,57 @@ elseif game.PlaceId == 7449423635 then
     --BloxFruits Second Sea
 elseif game.PlaceId == 4442272183 then
     local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
-    local BloxFSection = BloxF:CreateSection("BloxFruits Section")
+    local BloxFSection = BloxF:CreateSection("BloxFruits #1 Stuff")
 
+    local Mukuro = BloxF:CreateButton({
+        Name = "Mukuro",
+        Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mukuro",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+        end,
+    })
+    
+    
     local Ripper = BloxF:CreateButton({
         Name = "Ripper Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Ripper",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
         end,
     })
@@ -935,27 +1101,81 @@ elseif game.PlaceId == 4442272183 then
     local HohoHub = BloxF:CreateButton({
         Name = "HoHo Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Hoho Hub",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
         end,
     })
 
+    local BloxFSection = BloxF:CreateSection("BloxFruits #2 Stuff")
+
+
     local UltraStuff = BloxF:CreateButton({
-        Name = "Blox Fruits Hub2",
+        Name = "Furk BloxFruits",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Furk Bloxfruits",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
         end,
     })
     
-    local Mukuro = BloxF:CreateButton({
-        Name = "Mukuro",
-        Callback = function()
-            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-        end,
-    })
 
     local Mango = BloxF:CreateButton({
         Name = "Mango",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mango",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             getgenv().WaterMark = true
             loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
         end,
@@ -964,18 +1184,85 @@ elseif game.PlaceId == 4442272183 then
     local Vellerius = BloxF:CreateButton({
         Name = "Vellerius",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Vellerius",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
         end,
     })
 
+
     --Blox Fruits First Sea
 elseif game.PlaceId == 2753915549 then
     local BloxF = Window:CreateTab("BloxFruits") -- Title, Image
-    local BloxFSection = BloxF:CreateSection("BloxFruits Section")
+    local BloxFSection = BloxF:CreateSection("BloxFruits #1 Stuff")
 
+    local Mukuro = BloxF:CreateButton({
+        Name = "Mukuro",
+        Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mukuro",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+        end,
+    })
+    
+    
     local Ripper = BloxF:CreateButton({
         Name = "Ripper Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Ripper",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
         end,
     })
@@ -983,27 +1270,81 @@ elseif game.PlaceId == 2753915549 then
     local HohoHub = BloxF:CreateButton({
         Name = "HoHo Hub",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Hoho Hub",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
         end,
     })
 
+    local BloxFSection = BloxF:CreateSection("BloxFruits #2 Stuff")
+
+
     local UltraStuff = BloxF:CreateButton({
-        Name = "Blox Fruits Hub2",
+        Name = "Furk BloxFruits",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Furk Bloxfruits",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
         end,
     })
     
-    local Mukuro = BloxF:CreateButton({
-        Name = "Mukuro",
-        Callback = function()
-            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-        end,
-    })
 
     local Mango = BloxF:CreateButton({
         Name = "Mango",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Mango",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             getgenv().WaterMark = true
             loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
         end,
@@ -1012,6 +1353,26 @@ elseif game.PlaceId == 2753915549 then
     local Vellerius = BloxF:CreateButton({
         Name = "Vellerius",
         Callback = function()
+            
+                        
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Vellerius",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
         end,
     })
@@ -1025,13 +1386,50 @@ elseif game.PlaceId == 537413528 then
     local Button = Build:CreateButton({
         Name = "Auto-Build",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Auto-Build, Put the Builds in your executer files",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Alvorik/BBA-item-import/main/build_a_boat_bronide.lua"))()
+
         end,
     })
 
     local Vynixius = Build:CreateButton({
         Name = "Vynixius",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Vynixius",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/Script.lua"))()
         end,
     })
@@ -1039,6 +1437,24 @@ elseif game.PlaceId == 537413528 then
     local Autofarm = Build:CreateButton({
         Name = "Build-A-Boat Autofarm",
         Callback = function()
+            
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing Autofarm 2",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             local a,b,c = "juywvm","main","babft";loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/-Roblox-Projects-/%s/%s"):format(a, b, c)))() 
         end,
     })
@@ -1046,6 +1462,23 @@ elseif game.PlaceId == 537413528 then
     local VgBuild = Build:CreateButton({
         Name = "Vg Hub",
         Callback = function()
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Currently Executing VG Hub",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                   Ignore = {
+                      Name = "Okay!",
+                      Callback = function()
+                      print("The user tapped Okay!")
+                   end
+                },
+             },
+            })
+
+            wait(1)
+            
             loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
         end,
     })
@@ -2203,6 +2636,337 @@ elseif game.PlaceId == 606849621 then
         end,
     })
 
+
+elseif game.PlaceId == 6516141723 then
+    local DOORS = Window:CreateTab("DOORS") -- Title, Image
+    local DOORSLSection = DOORS:CreateSection("DOORS Stuff")
+
+    local CRUSIFIX = DOORS:CreateButton({
+        Name = "Give Crucifix",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Given Crucifix, Check your invetory.",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(.5)
+
+            local Item = game:GetObjects("rbxassetid://11583101826")[1]
+            Item.Parent = game.Players.LocalPlayer.Backpack
+
+        end,
+    })
+
+    local Darkrai = DOORS:CreateButton({
+        Name = "Entity Spawner",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Entity Spawn (Will Close this Hub)",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
+
+        end,
+    })
+
+
+    local DOORSLSection = DOORS:CreateSection("DOORS Scripts")
+
+    local CRUSIFIXSS = DOORS:CreateButton({
+        Name = "Vixinity",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Vixinity DOORS",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+
+        end,
+    })
+    
+    local Ominoux = DOORS:CreateButton({
+        Name = "Ominoux",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Ominoux.",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
+
+        end,
+    })
+
+
+    local CRUSIFIXSSA = DOORS:CreateButton({
+        Name = "Furky Doors",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Furky DOORS",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+
+        end,
+    })
+
+    local Darkrai = DOORS:CreateButton({
+        Name = "Darkrai(Mobile)",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Darkrai",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+
+        end,
+    })
+
+
+elseif game.PlaceId == 6839171747 then
+    local DOORS = Window:CreateTab("DOORS") -- Title, Image
+    local DOORSLSection = DOORS:CreateSection("DOORS Stuff")
+
+    local CRUSIFIX = DOORS:CreateButton({
+        Name = "Give Crucifix",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Given Crucifix, Check your invetory.",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(.5)
+
+            local Item = game:GetObjects("rbxassetid://11583101826")[1]
+            Item.Parent = game.Players.LocalPlayer.Backpack
+
+        end,
+    })
+
+    local Darkrai = DOORS:CreateButton({
+        Name = "Entity Spawner",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Entity Spawn (Will Close this Hub)",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
+
+        end,
+    })
+
+
+    local DOORSLSection = DOORS:CreateSection("DOORS Scripts")
+
+    local CRUSIFIXSS = DOORS:CreateButton({
+        Name = "Vixinity",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Vixinity DOORS",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+
+        end,
+    })
+    
+    local Ominoux = DOORS:CreateButton({
+        Name = "Ominoux",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Ominoux.",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
+
+        end,
+    })
+
+
+    local CRUSIFIXSSA = DOORS:CreateButton({
+        Name = "Furky Doors",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Furky DOORS",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+
+        end,
+    })
+
+    local Darkrai = DOORS:CreateButton({
+        Name = "Darkrai(Mobile)",
+        Callback = function()
+           
+            Rayfield:Notify({
+                Title = "Project Valix",
+                Content = "Succesfully Started Loaded, Darkrai",
+                Duration = 6.5,
+                Image = 0,
+                Actions = { -- Notification Buttons
+                Ignore = {
+                    Name = "Okay!",
+                    Callback = function()
+                    print("Loaded")
+                end
+                },
+            },
+            })
+
+            wait(1)
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+
+        end,
+    })
 
 
 end
