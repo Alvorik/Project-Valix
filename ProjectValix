@@ -114,6 +114,8 @@ local RTX = Menu:CreateButton({
     end,
 })
 
+print("This Script Hub was Created by NOTVIXINITY on Youtube if This Script Hub isn't called Project Valix Please Join my server and use the original and point it out to the person that made the Copie that IT IS NOT HIS/HER AND TO DELETE THE FILE.")
+
 -- Script Stuff
 local DestroyUI = Menu:CreateButton({
     Name = "Destroy Project X",
@@ -121,6 +123,9 @@ local DestroyUI = Menu:CreateButton({
         Rayfield:Destroy()    
     end,
 })
+
+
+
 
 -- Information
 local Info = Window:CreateTab("Information") -- Title, Image
