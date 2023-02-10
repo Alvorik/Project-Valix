@@ -118,7 +118,7 @@ print("This Script Hub was Created by NOTVIXINITY on Youtube if This Script Hub 
 
 -- Script Stuff
 local DestroyUI = Menu:CreateButton({
-    Name = "Destroy Project X",
+    Name = "Destroy Project Valix",
     Callback = function()
         Rayfield:Destroy()    
     end,
